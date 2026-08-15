@@ -18,6 +18,8 @@ import remarkSmartypants from 'remark-smartypants'
 import { SITE } from './src/constants'
 import { remarkAsides } from './src/remark'
 import { pagefindIntegration } from './src/utils'
+import vercel from '@astrojs/vercel'
+import tina from '@tinacms/astro/integration'
 
 export default defineConfig({
 	experimental: {
@@ -31,10 +33,11 @@ export default defineConfig({
 			},
 		],
 	},
-	output: 'static',
+	output: 'server',
+	adapter: vercel(),
 	trailingSlash: 'always',
 	site: SITE.url,
-	integrations: [expressiveCode(), mdx(), sitemap(), pagefindIntegration(), react()],
+	integrations: [expressiveCode(), mdx(), sitemap(), pagefindIntegration(), react(), tina()],
 	vite: {
 		plugins: [tailwindcss()],
 	},
