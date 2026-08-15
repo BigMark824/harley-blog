@@ -20,7 +20,7 @@
     "@astrojs/react": "^4.4.2",
     "@astrojs/rss": "^4.0.17",
     "@astrojs/sitemap": "^3.7.1",
-    "@astrojs/vercel": "^11.0.5",
+    "@astrojs/vercel": "8",
     "@codesandbox/sandpack-react": "^2.20.0",
     "@expressive-code/plugin-collapsible-sections": "^0.41.7",
     "@expressive-code/plugin-line-numbers": "^0.41.7",
