@@ -11,11 +11,11 @@ export const SITE: Record<string, string> = {
 	/**
 	 * Site-wide title
 	 */
-	title: 'Minimal Blog',
+	title: '~/Harley',
 	/**
 	 * Used on index page and as a fallback if no title is set
 	 */
-	titleDefault: 'Astro Theme: Minimal Blog',
+	titleDefault: '~/Harley',
 	/**
 	 * Used in meta tags, RSS feed, and other places
 	 */
@@ -51,25 +51,14 @@ export const HEADER: Header = {
 			title: 'Blog',
 			url: '/blog/',
 		},
-		{
-			title: 'About',
-			url: '/about/',
-		},
 	],
 	/**
 	 * Arbitrary list of links (e.g. social media) shown on the right side of the header
 	 */
 	external: [
 		{
-			title: 'Bluesky',
-			url: 'https://bsky.app/profile/lekoarts.de',
-			props: {
-				target: '_blank',
-			},
-		},
-		{
-			title: 'Homepage',
-			url: 'https://www.lekoarts.de/?utm_source=astro-theme-minimal-blog',
+			title: 'GitHub',
+			url: 'https://github.com/BigMark824',
 			props: {
 				target: '_blank',
 			},
@@ -84,6 +73,12 @@ export const FRONTMATTER_TAGS = new Map(
 	[
 		['General', 'general'] as const,
 		['Coding', 'coding'] as const,
+		['Azure', 'azure'] as const,
+		['.NET', '.net'] as const,
+		['DevOps', 'devops'] as const,
+		['c++', 'cpp'] as const,
+		['PHP', 'php'] as const,
+		['Nature', 'nature'] as const,
 		['MDX', 'mdx'] as const,
 		['Open Source', 'open-source'] as const,
 		['서울', '서울'] as const,
