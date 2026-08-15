@@ -7,7 +7,7 @@ export const SITE: Record<string, string> = {
 	/**
 	 * Base URL of your site, used in sitemap generation
 	 */
-	url: 'https://harley-blog-5ih5otp71-harleys-projects-69543da2.vercel.app/', // Add temp url
+	url: 'https://harley-blog-rust.vercel.app/', // Add temp url
 	/**
 	 * Site-wide title
 	 */
