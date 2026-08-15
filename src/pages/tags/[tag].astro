@@ -8,6 +8,8 @@ import Layout from '@layouts/layout.astro'
 import { defaultDateFormat, getPostsByTag } from '@utils'
 import { getCollection } from 'astro:content'
 
+export const prerender = true
+
 /**
  * 1. Generate static pages for all tags.
  * 2. Each tag page will have a list of entries associated with that tag.

@@ -11,6 +11,8 @@ import Aside from '@components/aside.astro'
 import TagLinks from '@components/tag-links.astro'
 import Playground from '@components/playground.astro'
 
+export const prerender = true
+
 export async function getStaticPaths() {
 	const entries = await getCollection('blog')
 
