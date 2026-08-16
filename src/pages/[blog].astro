@@ -10,6 +10,7 @@ import Spacer from '@components/spacer.astro'
 import Aside from '@components/aside.astro'
 import TagLinks from '@components/tag-links.astro'
 import Playground from '@components/playground.astro'
+import Comments from '@components/comments.astro'
 
 export const prerender = true
 
@@ -49,6 +50,7 @@ const { Content } = await render(entry)
 			</div>
 			<Spacer axis="vertical" size={12} />
 			<Content components={{ Aside, Playground }} />
+			<Comments />
 		</Prose>
 	</SkipNavContent>
 </Layout>
