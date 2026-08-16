@@ -37,9 +37,24 @@ const posts = sortAsc(await getCollection('blog')).slice(0, POSTS_TO_SHOW)
 	<Seo slot="seo" />
 	<SkipNavContent>
 		<h1 class="sr-only">{SITE.title}</h1>
-		<Prose>
-			<Hero />
-		</Prose>
+		<div class="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+			<Prose>
+				<Hero />
+			</Prose>
+			<div class="w-60 shrink-0 flex justify-center">
+				<img
+					src="/doordash.png"
+					alt="Portrait"
+					class="w-full dark:hidden"
+				/>
+
+				<img
+					src="/portrait.svg"
+					alt="Portrait"
+					class="hidden w-full dark:block"
+				/>
+			</div>
+		</div>
 		<Spacer axis="vertical" size={32} />
 		<section>
 			<div class="border-b border-border pb-4 flex justify-between items-center">
