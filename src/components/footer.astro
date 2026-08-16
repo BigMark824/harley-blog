@@ -2,26 +2,56 @@
 import Link from './link.astro'
 import Spacer from './spacer.astro'
 import ThemeSelect from './theme-select.astro'
+
+const commit =
+	import.meta.env.VERCEL_GIT_COMMIT_SHA ??
+	import.meta.env.GIT_COMMIT_SHA ??
+	'local'
+
+const commitShort = commit.slice(0, 7)
 ---
 
 <footer class="container">
 	<Spacer axis="vertical" size={32} />
+
 	<div class="flex flex-row justify-between items-center pt-6 border-t border-border">
-		<div class="flex gap-4">
+		<div class="flex gap-4 items-center">
 			<ThemeSelect />
+
 			<span class="w-px h-auto bg-border"></span>
+
 			<Link href="/rss.xml">RSS Feed</Link>
+
 			<span class="w-px h-auto bg-border"></span>
+
+			{
+				commit && (
+					<Link
+						href={`https://github.com/BigMark824/harley-blog/commit/${commit}`}
+					>
+						{commitShort ?? "commit"}
+					</Link>
+				)
+			}
+
+			<span class="w-px h-auto bg-border"></span>
+
 			<span>
-				Made with ❤️ using 
+				Made with ❤️ using
 				<Link href="https://tina.io">TinaCMS</Link>
 			</span>
 		</div>
+
 		<div>
-			<Link href="http://github.com/LekoArts/astro-theme-minimal-blog">Theme</Link> by <Link
-				href="https://www.lekoarts.de/?utm_source=astro-theme-minimal-blog">LekoArts</Link
-			>
+			<Link href="http://github.com/LekoArts/astro-theme-minimal-blog">
+				Theme
+			</Link>{' '}
+			by{' '}
+			<Link href="https://www.lekoarts.de/?utm_source=astro-theme-minimal-blog">
+				LekoArts
+			</Link>
 		</div>
 	</div>
+
 	<Spacer axis="vertical" size={8} />
 </footer>
