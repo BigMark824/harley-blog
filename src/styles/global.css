@@ -2,33 +2,39 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-	--font-sans: var(--font-plex-sans);
+	--font-sans: 'JetBrains Mono', monospace;
 
-	--color-bg: var(--color-gray-50);
-	--color-text: var(--color-gray-700);
-	--color-highlight: var(--color-black);
-	--color-primary: var(--color-blue-600);
-	--color-subtle: var(--color-gray-600);
-	--color-faded: var(--color-gray-500);
-	--color-border: var(--color-gray-200);
+	/* Gruvbox Light */
+	--color-bg: #fbf1c7;
 
-	--color-ic-bg: var(--color-white);
-	--color-ic-border: var(--color-gray-200);
+	--color-text: #3c3836;
+	--color-highlight: #282828;
+	--color-primary: #b57614;
+	--color-subtle: #665c54;
+	--color-faded: #928374;
+
+	--color-border: #d5c4a1;
+
+	--color-ic-bg: #f2e5bc;
+	--color-ic-border: #d5c4a1;
 }
 
 @layer theme {
 	:root {
 		@variant dark {
-			--color-bg: var(--color-gray-900);
-			--color-text: var(--color-gray-200);
-			--color-highlight: var(--color-white);
-			--color-primary: var(--color-blue-400);
-			--color-subtle: var(--color-gray-300);
-			--color-faded: var(--color-gray-400);
-			--color-border: var(--color-gray-700);
+			/* Gruvbox Dark */
+			--color-bg: #282828;
 
-			--color-ic-bg: var(--color-gray-700);
-			--color-ic-border: var(--color-gray-600);
+			--color-text: #ebdbb2;
+			--color-highlight: #fbf1c7;
+			--color-primary: #fabd2f;
+			--color-subtle: #bdae93;
+			--color-faded: #928374;
+
+			--color-border: #504945;
+
+			--color-ic-bg: #3c3836;
+			--color-ic-border: #504945;
 		}
 	}
 }
