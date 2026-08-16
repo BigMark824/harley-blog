@@ -22,6 +22,7 @@ pnpm run dev
 * [TailwindCSS](https://tailwindcss.com/) - Styling
 * [Vercel](https://vercel.com) - Automatic Deployment
 * [PageFind](https://pagefind.app/) - Search functionality
+* [TinaCMS](https://tina.io) - Static content editing / creation
 
 
 # Credits
