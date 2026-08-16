@@ -4,7 +4,8 @@ This is my blog, I post about Clean Architecture, Nature, low level programming 
 
 ## Getting Started
 ### Prerequisites
-[PNPM](https://pnpm.io/)
+* [PNPM](https://pnpm.io/)
+* [NodeJS](https://nodejs.org/en/download)
 
 ### Run!
 ```bash
