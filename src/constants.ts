@@ -63,6 +63,13 @@ export const HEADER: Header = {
 				target: '_blank',
 			},
 		},
+		{
+			title: 'LinkedIn',
+			url: 'https://www.linkedin.com/in/harleyj8995/',
+			props: {
+				target: '_blank',
+			},
+		},
 	],
 }
 
