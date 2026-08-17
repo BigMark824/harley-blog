@@ -28,6 +28,25 @@ const OSS_PROJECTS: Array<{ name: string; url: string; description: string }> = 
 	},
 ]
 
+const BUTTONS = [
+	'/buttons/Area51_Shadowlands_7775_pics_macmade.gif',
+	'/buttons/abbyssinian70_shincode9.jpg',
+	'/buttons/gohanrage1_goku.gif',
+	'/buttons/Hollywood_Bungalow_2350_Netnow.gif',
+	'/buttons/Area51_Lair_9218_microsoft.gif',
+	'/buttons/addiction1.geo_Old_Stuff_netzilla.gif',
+	'/buttons/linkinparkinthai_ban2.gif',
+	'/buttons/music323_images_winamp-.gif',
+	'/buttons/CollegePark_Field_9329_nsync.gif',
+	'/buttons/tailwind.gif',
+	'/buttons/md.gif',
+	'/buttons/human-made.gif',
+	'/buttons/brow.gif',
+	'/buttons/coke.gif',
+	'/buttons/apple_computer.gif',
+	'/buttons/linuxnow.jpg'
+]
+
 const POSTS_TO_SHOW = 3
 
 const posts = sortAsc(await getCollection('blog')).slice(0, POSTS_TO_SHOW)
@@ -35,12 +54,15 @@ const posts = sortAsc(await getCollection('blog')).slice(0, POSTS_TO_SHOW)
 
 <Layout>
 	<Seo slot="seo" />
+
 	<SkipNavContent>
 		<h1 class="sr-only">{SITE.title}</h1>
+
 		<div class="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
 			<Prose>
 				<Hero />
 			</Prose>
+
 			<div class="w-60 shrink-0 flex justify-center">
 				<img
 					src="/doordash.png"
@@ -55,13 +77,22 @@ const posts = sortAsc(await getCollection('blog')).slice(0, POSTS_TO_SHOW)
 				/>
 			</div>
 		</div>
+
 		<Spacer axis="vertical" size={32} />
+
 		<section>
 			<div class="border-b border-border pb-4 flex justify-between items-center">
-				<h2 class="font-medium text-xl md:text-2xl lg:text-3xl text-highlight">Latest Posts</h2>
-				<div><Link href="/blog/">Read all posts</Link></div>
+				<h2 class="font-medium text-xl md:text-2xl lg:text-3xl text-highlight">
+					Latest Posts
+				</h2>
+
+				<div>
+					<Link href="/blog/">Read all posts</Link>
+				</div>
 			</div>
+
 			<Spacer axis="vertical" size={8} />
+
 			<div class="flex gap-10 flex-col">
 				{
 					posts.map(({ data: post }) => (
@@ -69,19 +100,29 @@ const posts = sortAsc(await getCollection('blog')).slice(0, POSTS_TO_SHOW)
 							<Link variant="highlight" href={`/${post.slug}/`}>
 								{post.title}
 							</Link>
+
 							<Spacer axis="vertical" size={2} />
-							<div class="text-faded">{defaultDateFormat(post.date)}</div>
+
+							<div class="text-faded">
+								{defaultDateFormat(post.date)}
+							</div>
 						</div>
 					))
 				}
 			</div>
 		</section>
+
 		<Spacer axis="vertical" size={32} />
+
 		<section>
 			<div class="border-b border-border pb-4">
-				<h2 class="font-medium text-xl md:text-2xl lg:text-3xl text-highlight">Open Source Projects</h2>
+				<h2 class="font-medium text-xl md:text-2xl lg:text-3xl text-highlight">
+					Open Source Projects
+				</h2>
 			</div>
+
 			<Spacer axis="vertical" size={8} />
+
 			<div class="flex gap-10 flex-col">
 				{
 					OSS_PROJECTS.map((oss) => (
@@ -89,9 +130,32 @@ const posts = sortAsc(await getCollection('blog')).slice(0, POSTS_TO_SHOW)
 							<Link variant="highlight" href={oss.url}>
 								{oss.name}
 							</Link>
+
 							<Spacer axis="vertical" size={2} />
-							<div class="text-faded">{oss.description}</div>
+
+							<div class="text-faded">
+								{oss.description}
+							</div>
 						</div>
+					))
+				}
+			</div>
+		</section>
+
+		<Spacer axis="vertical" size={16} />
+
+		<section class="border-t border-border pt-8 pb-0">
+			<div class="flex flex-wrap justify-center max-w-[646px] mx-auto gap-2">
+				{
+					BUTTONS.map((button) => (
+						<img
+							src={button}
+							alt=""
+							width="88"
+							height="31"
+							loading="lazy"
+							class="block shrink-0"
+						/>
 					))
 				}
 			</div>
