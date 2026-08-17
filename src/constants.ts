@@ -19,7 +19,7 @@ export const SITE: Record<string, string> = {
 	/**
 	 * Used in meta tags, RSS feed, and other places
 	 */
-	description: 'Minimal Astro blog theme with extensive code syntax highlighting capabilities, focus on typography, and clean design bringing your content to the forefront.',
+	description: 'The coolest blog in the stratosphere.',
 	/**
 	 * Language used in the <html> tag
 	 */
@@ -31,7 +31,7 @@ export const SITE: Record<string, string> = {
 	/**
 	 * Default author name that gets added to meta tags
 	 */
-	defaultAuthor: 'LekoArts',
+	defaultAuthor: 'Harley',
 }
 
 interface Header {
